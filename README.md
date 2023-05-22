@@ -1,35 +1,64 @@
 <a name="readme-top"></a>
 
+<!--
+HOW TO USE:
+This is an example of how you may give instructions on setting up your project locally.
+
+Modify this file to match your project and remove sections that don't apply.
+
+REQUIRED SECTIONS:
+- Table of Contents
+- About the Project
+  - Built With
+  - Live Demo
+- Getting Started
+- Authors
+- Future Features
+- Contributing
+- Show your support
+- Acknowledgements
+- License
+
+OPTIONAL SECTIONS:
+- FAQ
+
+After you're finished please remove all the comments and instructions!
+-->
+
 <div align="center">
-  <h3><b>About
-OOP school library with Ruby  🚀</b></h3>
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+
+
+  
+
 </div>
+
+<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
-<!--   - [🚀 Live Demo](#live-demo) -->
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
-<!--   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment) -->
+  - [Usage](#usage)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖  About
-OOP school library with Ruby <a name="about-project"></a>
+# 📖 [OOP school library with Ruby] <a name="about-project"></a>
 
-<b> About
-OOP school library with Ruby </b> is a simple ruby application developed to help manage school activities.
-
+**OOP school library with Ruby** is a simple ruby application developed to help manage school activities.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -38,10 +67,24 @@ OOP school library with Ruby </b> is a simple ruby application developed to help
 <details>
   <summary>Client</summary>
   <ul>
-    <li>Ruby</li>
+    <li><a href="https://ruby.org/">Ruby</a></li>
   </ul>
 </details>
 
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+
+- **Add class**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [No link yet]() 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -49,32 +92,78 @@ OOP school library with Ruby </b> is a simple ruby application developed to help
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
-- [x] A code editor like Visual Studio Code with Git and Node.js.
+<ul>
+    <li><a href="https://code.visualstudio.com/">Vscode</a></li>
+    <li><a href="#!">Node js</a></li>
+  </ul>
 
-You can check if Git is installed by running the following command in the terminal.
+<!--
+Example command:
+
+```sh
+ gem install rails
 ```
-$ git --version
-```
+ -->
 
 ### Setup
 
-Clone this repository using the GitHub link provided below.
+Clone this repository to your desired folder by:
 
+```
+git clone https://github.com/byiringiroscar/OOP-school-library-with-Ruby
+```
+
+<!--
+Example commands:
+
+```sh
+  cd my-folder
+  git clone git@github.com:myaccount/my-project.git
+```
+--->
 
 ### Install
 
-In the terminal, go to your file directory and run this command.
+
+Install this project with: 
 
 ```
-$ git clone https://github.com/byiringiroscar/OOP-school-library-with-Ruby
+cd OOP-school-library-with-Ruby
 ```
 
+<!--
+Example command:
+
+```sh
+  cd my-project
+  gem install
+```
+--->
+
+### Usage
+
+
+To run the project make sure **[Node js ]** installed correctly then , execute the following command:
+
+- Run 
+```
+ruby student.rb
+```
+
+
+<!--
+Example command:
+
+```sh
+  rails server
+```
+--->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
@@ -86,32 +175,51 @@ $ git clone https://github.com/byiringiroscar/OOP-school-library-with-Ruby
 - GitHub: [@githuboscar](https://github.com/byiringiroscar)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/oscar-byiringiro-9baa8313a/)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+
+
+- [ ] **[Deploy Database]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-
+<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/byiringiroscar/OOP-school-library-with-Ruby/issues).
+
+Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-
-Give a ⭐️ if you like this project!
+If you like this project you can buy me cofee here [link](https://www.linkedin.com/in/oscar-byiringiro-9baa8313a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- **I would like to thank microverse for make this thing happen**
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>

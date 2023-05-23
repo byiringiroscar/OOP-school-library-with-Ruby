@@ -1,0 +1,8 @@
+require_relative 'nameable'
+
+class TrimmerDecorator < Decorator
+  def correct_name
+    trimmed_name = @nameable.correct_name
+    trimmed_name.length > 10 ? trimmed_name[0..9] : trimmed_name
+  end
+end

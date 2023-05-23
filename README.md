@@ -77,6 +77,7 @@ After you're finished please remove all the comments and instructions!
 
 
 - **Add class**
+- **Decorate class**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,5 +1,7 @@
 require_relative 'person'
 require_relative 'base'
+require_relative 'capitalize'
+require_relative 'trim_name'
 
 person = Person.new(22, 'maximilianus')
 puts person.correct_name

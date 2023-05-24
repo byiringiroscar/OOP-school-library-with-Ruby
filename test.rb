@@ -2,12 +2,16 @@ require_relative 'person'
 require_relative 'base'
 require_relative 'capitalize'
 require_relative 'trim_name'
+require_relative 'rental'
+require_relative 'book'
 
 person = Person.new(22, 'maximilianus')
-puts person.correct_name
+book = Book.new("Bible", "jesus")
+rental1 = Rental.new("2023-05-24", book, person)
+rental2 = Rental.new("2023-05-25", book, person)
 
-capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
+person.add_rental(rental1)
+person.add_rental(rental2)
 
-capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
+puts person.rentals[0].date 
+puts person.rentals[1].date 

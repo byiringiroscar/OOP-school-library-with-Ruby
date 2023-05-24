@@ -1,3 +1,5 @@
+require_relative 'classroom'
+
 class Student < Person
   attr_reader :classroom, :id
 
@@ -5,6 +7,7 @@ class Student < Person
     super(name, age, parent_permission)
     @classroom = classroom
     @id = Random.rand(1..1000)
+    classroom&.add_student(self)
   end
 
   def play_hooky

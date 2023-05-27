@@ -72,22 +72,37 @@ class App
     end
   end
 
-  def create_rental
-    puts 'Select a person from the following list by number (not ID):'
-
+  def display_people_list
     @allpeople.each_with_index do |person, index|
       person_type = person.is_a?(Student) ? '[Student]' : '[Teacher]'
       puts "#{index}) #{person_type} Name: #{person.name.chomp}, ID: #{person.id}, Age: #{person.age}"
     end
+  end
 
-    selected_person_index = gets.to_i
-    selected_person = @allpeople[selected_person_index]
-
-    puts 'Select a book from the following list by number (not ID):'
-
+  def display_book_list
     @books.each_with_index do |book, index|
       puts "#{index}) Title: '#{book.title.chomp}', Author: #{book.author}"
     end
+  end
+
+  def create_rental
+    if @allpeople.empty?
+      puts 'No people available. Please create a person first.'
+      return
+    end
+    puts 'Select a person from the following list by number (not ID):'
+
+    display_people_list
+
+    selected_person_index = gets.to_i
+    selected_person = @allpeople[selected_person_index]
+    if @books.empty?
+      puts 'No books available. Please create a book first.'
+      return
+    end
+    puts 'Select a book from the following list by number (not ID):'
+
+    display_book_list
 
     selected_book_index = gets.to_i
     selected_book = @books[selected_book_index]

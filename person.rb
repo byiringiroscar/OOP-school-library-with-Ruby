@@ -31,6 +31,3 @@ class Person < Nameable
     @age.to_i >= 18
   end
 end
-
-# person = Person.new(22, 'maximilianus', parent_permission: false)
-# puts person.parent_permission

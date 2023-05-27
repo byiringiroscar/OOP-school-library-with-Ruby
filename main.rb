@@ -1,42 +1,43 @@
 require_relative 'app'
 
-newApp = App.new
-welcomeCount = 0
-welcomeMessage = "Welcome to School Library System!"
+new_app = App.new
+welcome_count = 0
+welcome_message = 'Welcome to School Library System!'
 
 entry_point = <<~PARAGRAPH
-  #{welcomeCount > 0 ? '' : welcomeMessage}
 
-  
-  Please choose an option by entering a number
-  1 - List all books
-  2 - List all people
-  3 - Create a person
-  4 - Create a book
-  5 - Create a rental
-  6 - List all rentals for a given person id
-  7 - Exit
+  #{welcome_count.positive? ? '' : welcome_message}
+
+
+    Please choose an option by entering a number
+    1 - List all books
+    2 - List all people
+    3 - Create a person
+    4 - Create a book
+    5 - Create a rental
+    6 - List all rentals for a given person id
+    7 - Exit
 PARAGRAPH
 exit = false
 exit_message = 'Thanks for visiting us!'
 until exit
   puts entry_point
-  welcomeCount += 1
+  welcome_count += 1
   answer = gets.chomp
   answer = answer.to_i
   case answer
   when 1
-    newApp.listBooks
+    new_app.list_books
   when 2
-    newApp.listAllPeople
+    new_app.list_all_people
   when 3
-    newApp.createPerson
+    new_app.create_person
   when 4
-    newApp.createBook
+    new_app.create_book
   when 5
-    newApp.createRental
+    new_app.create_rental
   when 6
-    newApp.getRentalsByPersonId
+    new_app.rentals_by_person_id
   when 7
     exit = true
   else

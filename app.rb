@@ -5,10 +5,24 @@ class App
     @classrooms = []
     @books = []
     @rentals = []
-    @allPeople = []
+    @allpeople = []
   end
 
-  def createPerson
+  def choice_teacher
+    print 'Age: '
+    age = gets.to_i
+    print 'Name: '
+    name = gets
+    print 'Specialization : '
+    specialization = gets.chomp
+    require_relative 'teacher'
+    teacher = Teacher.new(age, name, specialization: specialization)
+    @teachers << teacher
+    @allpeople << teacher
+    puts "Teacher created of name #{teacher.name}"
+  end
+
+  def create_person
     print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     choice_choosed = gets.to_i
     if choice_choosed == 1
@@ -21,28 +35,18 @@ class App
       parent_permission = parent_permission == 'Y'
       require_relative 'student'
       student = Student.new(age, name, parent_permission: parent_permission)
-      # add student in list
       @students << student
-      @allPeople << student
+      @allpeople << student
       puts "Student created of name  #{student.name}"
-    end
-    return unless choice_choosed == 2
+    elsif choice_choosed == 2
 
-    print 'Age: '
-    age = gets.to_i
-    print 'Name: '
-    name = gets
-    print 'Specialization : '
-    specialization = gets.chomp
-    require_relative 'teacher'
-    teacher = Teacher.new(age, name, specialization: specialization)
-    # add teacher in list
-    @teachers << teacher
-    @allPeople << teacher
-    puts "Teacher created of name #{teacher.name}"
+      choice_teacher
+    else
+      puts 'Invalid option, try again'
+    end
   end
 
-  def createBook
+  def create_book
     print 'Title: '
     title = gets
     print 'Author: '
@@ -53,31 +57,31 @@ class App
     puts "Book created of title #{book.title}"
   end
 
-  def listBooks
+  def list_books
     puts 'List of Books:'
     @books.each do |book|
       puts "Title: \"#{book.title.chomp}\", Author: \"#{book.author.chomp}\""
     end
   end
 
-  def listAllPeople
+  def list_all_people
     puts 'List of People:'
-    @allPeople.each do |person|
+    @allpeople.each do |person|
       person_type = person.is_a?(Student) ? '[Student]' : '[Teacher]'
       puts "#{person_type} Name: #{person.name.chomp}, ID: #{person.id} Age: #{person.age}"
     end
   end
 
-  def createRental
+  def create_rental
     puts 'Select a person from the following list by number (not ID):'
 
-    @allPeople.each_with_index do |person, index|
+    @allpeople.each_with_index do |person, index|
       person_type = person.is_a?(Student) ? '[Student]' : '[Teacher]'
       puts "#{index}) #{person_type} Name: #{person.name.chomp}, ID: #{person.id}, Age: #{person.age}"
     end
 
     selected_person_index = gets.to_i
-    selected_person = @allPeople[selected_person_index]
+    selected_person = @allpeople[selected_person_index]
 
     puts 'Select a book from the following list by number (not ID):'
 
@@ -94,7 +98,7 @@ class App
     @rentals << rental
   end
 
-  def getRentalsByPersonId
+  def rentals_by_person_id
     print 'Enter the ID of the person: '
     person_id = gets.chomp.to_i
 
@@ -105,7 +109,7 @@ class App
     else
       puts "Rentals for Person ID #{person_id}:"
       person_rentals.each do |rental|
-        puts "Date: #{rental.date}, #{rental.person.name.chomp}, Book: '#{rental.book.title}' by #{rental.book.author}"
+        puts "Date: #{rental.date}, #{rental.person.name.chomp}, Book: '#{rental.book.title}' by #{rental.book.author}'"
       end
     end
   end

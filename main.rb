@@ -19,7 +19,7 @@ entry_point = <<~PARAGRAPH
     7 - Exit
 PARAGRAPH
 exit = false
-exit_message = 'Thanks for visiting us!'
+exit_message = 'Thanks for visiting us! '
 until exit
   puts entry_point
   welcome_count += 1

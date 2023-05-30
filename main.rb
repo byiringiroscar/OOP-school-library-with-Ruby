@@ -1,12 +1,11 @@
 require_relative 'app'
 
 new_app = App.new
-welcome_count = 0
 welcome_message = 'Welcome to School Library System!'
 
 entry_point = <<~PARAGRAPH
 
-  #{welcome_count.positive? ? '' : welcome_message}
+#{'Welcome to School Library System!' if new_app.welcome_count.zero?}
 
 
     Please choose an option by entering a number
@@ -22,7 +21,7 @@ exit = false
 exit_message = 'Thanks for visiting us! '
 until exit
   puts entry_point
-  welcome_count += 1
+  new_app.welcome_count += 1
   answer = gets.chomp
   answer = answer.to_i
   case answer

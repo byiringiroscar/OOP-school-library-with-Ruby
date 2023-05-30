@@ -1,21 +1,20 @@
 require_relative 'app'
 
 new_app = App.new
-welcome_message = 'Welcome to School Library System!'
 
 entry_point = <<~PARAGRAPH
 
-#{'Welcome to School Library System!' if new_app.welcome_count.zero?}
+  #{'Welcome to School Library System!' if new_app.welcome_count.zero?}
 
 
-    Please choose an option by entering a number
-    1 - List all books
-    2 - List all people
-    3 - Create a person
-    4 - Create a book
-    5 - Create a rental
-    6 - List all rentals for a given person id
-    7 - Exit
+      Please choose an option by entering a number
+      1 - List all books
+      2 - List all people
+      3 - Create a person
+      4 - Create a book
+      5 - Create a rental
+      6 - List all rentals for a given person id
+      7 - Exit
 PARAGRAPH
 exit = false
 exit_message = 'Thanks for visiting us! '

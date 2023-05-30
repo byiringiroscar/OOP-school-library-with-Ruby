@@ -1,5 +1,6 @@
 class App
   attr_accessor :welcome_count
+
   def initialize()
     @welcome_count = 0
     @students = []
@@ -9,7 +10,6 @@ class App
     @rentals = []
     @allpeople = []
   end
-
 
   def choice_teacher
     print 'Age: '

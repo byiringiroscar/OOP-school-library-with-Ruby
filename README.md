@@ -178,13 +178,16 @@ Example command:
 - GitHub: [@githuboscar](https://github.com/byiringiroscar)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/oscar-byiringiro-9baa8313a/)
 
+👤👤 **Yosef Geda**
+
+- GitHub: [@YosefGeda](https://github.com/Yosefgeda)
+- LinkedIn: [@yosefgeda](https://www.linkedin.com/in/yosefgeda/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-
 
 - [ ] **[Deploy Database]**
 

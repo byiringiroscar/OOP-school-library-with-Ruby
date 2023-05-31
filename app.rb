@@ -1,5 +1,8 @@
 class App
+  attr_accessor :welcome_count
+
   def initialize()
+    @welcome_count = 0
     @students = []
     @teachers = []
     @classrooms = []

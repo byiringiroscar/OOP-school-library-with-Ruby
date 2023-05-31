@@ -15,6 +15,3 @@ class Student < Person
     '¯\\(ツ)/¯'
   end
 end
-
-# student = Student.new(16, 'John Doe', parent_permission: false)
-# puts student.name  # Output: John Doe

@@ -12,6 +12,3 @@ class Teacher < Person
     true
   end
 end
-
-# teacher = Teacher.new('John Doe', 35, specialization: 'Math')
-# puts teacher.specialization # Output: John Doe

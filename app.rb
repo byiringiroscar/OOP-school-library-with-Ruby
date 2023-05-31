@@ -1,3 +1,5 @@
+require 'json'
+
 class App
   attr_accessor :welcome_count
 
@@ -23,6 +25,10 @@ class App
     @teachers << teacher
     @allpeople << teacher
     puts "Teacher created of name #{teacher.name}"
+    File.open("teacher.json", "a") do |file|
+      file.write(JSON.generate({ name: teacher.name, age: teacher.age, specialization: teacher.specialization}))
+      file.write("\n")
+    end 
   end
 
   def create_person
@@ -41,6 +47,11 @@ class App
       @students << student
       @allpeople << student
       puts "Student created of name  #{student.name}"
+      File.open("student.json", "a") do |file|
+        file.write(JSON.generate({ name: student.name, age: student.age, parent_permission: student.parent_permission}))
+        file.write("\n")
+      end   
+    
     elsif choice_choosed == 2
 
       choice_teacher
@@ -58,20 +69,49 @@ class App
     book = Book.new(title, author)
     @books << book
     puts "Book created of title #{book.title}"
+    File.open("book.json", "a") do |file|
+      file.write(JSON.generate({ title: book.title, author: book.author}))
+      file.write("\n")
+    end 
   end
 
   def list_books
     puts 'List of Books:'
-    @books.each do |book|
-      puts "Title: \"#{book.title.chomp}\", Author: \"#{book.author.chomp}\""
+    # @books.each do |book|
+    #   puts "Title: \"#{book.title.chomp}\", Author: \"#{book.author.chomp}\""
+    # end
+    file = File.read('book.json')
+    data = file.split("\n").map { |line| JSON.parse(line) }
+    data.each do |book|
+      puts "Title: #{book['title'].chomp}"
+      puts "Author: #{book['author']}"
+      puts "------------------------"
     end
   end
 
   def list_all_people
-    puts 'List of People:'
-    @allpeople.each do |person|
-      person_type = person.is_a?(Student) ? '[Student]' : '[Teacher]'
-      puts "#{person_type} Name: #{person.name.chomp}, ID: #{person.id} Age: #{person.age}"
+    puts 'List of Students:'
+    # @allpeople.each do |person|
+    #   person_type = person.is_a?(Student) ? '[Student]' : '[Teacher]'
+    #   puts "#{person_type} Name: #{person.name.chomp}, ID: #{person.id} Age: #{person.age}"
+    # end
+    file = File.read('student.json')
+    data = file.split("\n").map { |line| JSON.parse(line) }
+    data.each do |person|
+      puts "Name: #{person['name'].chomp}"
+      puts "Age: #{person['age']}"
+      puts "Parent Permission: #{person['parent_permission']}"
+      puts "------------------------"
+    end
+
+    puts 'List of Teachers:'
+    file = File.read('teacher.json')
+    data = file.split("\n").map { |line| JSON.parse(line) }
+    data.each do |person|
+      puts "Name: #{person['name'].chomp}"
+      puts "Age: #{person['age']}"
+      puts "Parent Permission: #{person['parent_permission']}"
+      puts "------------------------"
     end
   end
 

@@ -1,4 +1,5 @@
 require_relative 'nameable'
+require_relative 'base'
 
 class TrimmerDecorator < Decorator
   def correct_name

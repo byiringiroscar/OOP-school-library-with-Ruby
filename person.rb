@@ -29,6 +29,7 @@ class Person < Nameable
 
   def of_age?
     return true if @age.to_i >= 18
+
     false
   end
 end
